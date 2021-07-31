@@ -1,0 +1,416 @@
+Bonjour, je suis Arnaud Legout et nous allons passer les prochaines semaines de ce MOOC ensemble. 
+Dans cette vidéo, nous allons découvrir les notions d'objet, de variable et de typage dynamique. 
+Pourquoi est-ce que ces notions sont tellement importantes en Python ? Parce qu'en Python, tout est un objet. 
+Par conséquent, dans vos programmes, vous aurez à manipuler de nombreux objets. Et le moyen en Python de manipuler ces objets, 
+c'est de leur donner un nom par l'intermédiaire de variables. On dit que les variables référencent les objets. 
+Regardons maintenant cette notion d'objet. Dans un programme informatique, un objet est un morceau de code qui va contenir des données. 
+Mais il va également contenir un ensemble de mécanismes qui permettent de manipuler ces données et que l'on appelle méthodes. 
+Les objets ont tous un type. Le type est le comportement par défaut qui va être défini pour ces objets. Par conséquent, 
+le type va permettre de définir les données et les méthodes qui vont être associées à cet objet. Prenons l'analogie d'une chaîne de montage de voitures. 
+Lorsque vous avez une usine, votre usine va construire des voitures, et c'est cette usine qui va définir un ensemble de comportements que toutes les voitures 
+qui vont sortir de la chaîne de montage vont avoir. Donc par exemple, la puissance du moteur, le fait que votre voiture va avoir des clignotants, des accélérateurs, 
+vont être déterminés par votre chaîne de montage. On peut donc dire que la chaîne de montage détermine le type des voitures qui vont sortir de cette chaîne
+et que la voiture est l'objet qui sort de cette chaîne de montage. Revenons maintenant à nos programmes informatiques, à nos objets informatiques. 
+Je vais représenter l'ensemble des objets que l'on a dans la mémoire de l'ordinateur. Maintenant, créons un objet, créons notre premier objet python. 
+Pour cela, nous allons créer un objet de type chaîne de caractères, nous reviendrons largement sur ce type d'objet dans la suite. Pour créer un objet 
+chaîne de caractères vous mettez deux apostrophes et entre les apostrophes, vous mettez la chaîne de caractères que vous voulez créer. 
+Lorsque vous appuyez sur le retour chariot, l'interpréteur Python va créer cet objet chaîne de caractères. Nous voyons que cet objet a des données 
+associées c'est le mot "spam" et cet objet a également un ensemble de méthodes comme par exemple la méthode upper(). D'où viennent les méthodes 
+de la chaîne de caractères puisque nous n'avons rien défini nous-mêmes ? En fait, toutes les méthodes de la chaîne de caractères viennent 
+grâce à son type le type "chaîne de caractères". Maintenant, nous pouvons appeler les méthodes sur ces objets. Pour appeler une méthode sur un objet, 
+c'est très simple, il suffit d'utiliser la notation "point". Pour cela, nous allons mettre l'objet "point" la méthode que l'on veut appeler. 
+et n'oublions pas de mettre les parenthèses ouvrante et fermante qui permettent de déclencher l'exécution de la méthode upper() sur l'objet "spam". 
+Maintenant que nous avons vu cette notion d'objet, regardons comment nommer les objets. On dit les référencer. Pour cela, on va affecter un objet 
+à un nom de variable particulier avec une notation que l'on appelle la notation d'affectation. Donc supposons que nous voulions nommer l'entier 1, 
+nous allons écrire note "égale" 1, ce qui veut dire que la variable de nom "note" va maintenant référencer l'objet 1. On pourra ainsi manipuler 
+cet objet par l'intermédiaire de ce nom de variable. Un nom de variable en Python peut être défini par n'importe quelle lettre en minuscule, 
+n'importe quelle lettre en majuscule, les entiers allant de 0 à 9 et également le caractère tiret bas que l'on appelle également "underscore". 
+Un nom de variable peut commencer par une lettre, ça peut également commencer par l'underscore mais ça ne peut pas commencer par un chiffre. 
+Un nom de variable prend en compte la casse, c'est-à-dire qu'un nom en minuscule et un nom en majuscule vont représenter deux variables différentes. 
+Pour finir, il est très important en Python de donner des noms de variable qui sont explicites. Par exemple, moyenne_age_francais est un bon nom de variable,
+meilleur que moy_age_f et bien meilleur que simplement la variable x. Il est très important de donner de donner des bons noms de variable puisque ça participe 
+à la documentation automatique de votre code. Et nous verrons dans les prochaines vidéos et les semaines suivantes que Python offre de nombreux mécanismes 
+pour faciliter ce nommage explicite des objets que l'on manipule. Maintenant que nous avons vu les notions d'objet et de variable, parlons de la dernière 
+notion importante de cette vidéo, qui est le typage dynamique. Je vous représente ici l'espace des objets comme nous avons vu précédemment qui va contenir 
+tous les objets que nous avons dans l'ordinateur, et également l'espace des variables qui représente les variables qui vont référencer les objets 
+dans notre ordinateur. Nous verrons dans la suite et dans les semaines qui viennent que cet espace des variables, on appelle ça en fait un espace de nommage. 
+Supposons maintenant que je fasse a égale 3 ce qui veut dire que ma variable a va référencer l'entier 3. Lorsque je fais un retour chariot, 
+Python va exécuter 3 opérations. La première opération va consister à créer l'entier 3. Donc c'est un objet qui est créé dans l'espace des objets. 
+Puis il va créer une variable a dans l'espace des variables. Et pour finir, il va créer une référence entre cette variable a et l'entier 3. Maintenant,
+supposons que je fasse a égale spam. Python va effectuer la même suite d'opérations et il va créer un objet de type chaîne de caractères qui s'appelle spam,
+puis il va créer une variable a mais la variable a existe déjà donc il va simplement déréférencer cette variable a, et lui faire référencer 
+l'objet chaîne de caractères spam. Donc ici on voit que cette notion de typage dynamique est très importante. En fait, qu'est-ce que ça veut dire 
+le typage dynamique ? Ça veut dire qu'en Python le type n'est pas lié à la variable qui référence l'objet mais est lié à l'objet. En fait, 
+Python est un langage que l'on appelle un langage à typage fort, ça veut dire que le typage est lié aux objets et que l'objet va garder le même type 
+durant toute l'exécution du programme. Par contre, la variable, elle, peut référencer des objets qui vont être de type différent en cours d'exécution. 
+Pour finir, si je fais del de a, ça va me permettre de supprimer la variable a de mon espace des variables. Si mon objet n'a plus de référence, 
+on a un mécanisme en Python qui s'appelle un mécanisme de garbage collector qui va libérer la mémoire de l'ordinateur une fois que les objets ne sont plus référencés.
+Dans cette vidéo, nous avons introduit les notions d'objet, de variable et de typage dynamique. Ce sont des notions clé en Python parce que comme nous l'avons vu 
+en Python tout est un objet, et par conséquent, pour pouvoir manipuler ces objets, il faut être capable de leur donner un nom, et on leur donne ce nom 
+par le mécanisme de référencement qui consiste à donner un nom de variable qui est égale à un objet. À bientôt !
+
+---------------------------------------------------------------------
+Noms de variables
+Complément - niveau basique
+
+Revenons sur les noms de variables autorisés ou non.
+
+Les noms les plus simples sont constitués de lettres. Par exemple :
+
+factoriel = 1
+
+On peut utiliser aussi les majuscules, mais attention cela définit une variable différente. Ainsi :
+
+Factoriel = 100
+
+factoriel == Factoriel
+
+Le signe == permet de tester si deux variables ont la même valeur. Si les variables ont la même valeur, le test retournera True, et False sinon. On y reviendra bien entendu.
+Conventions habituelles
+
+En règle générale, on utilise uniquement des minuscules pour désigner les variables simples (ainsi d'ailleurs que pour les noms de fonctions), les majuscules sont réservées en principe pour d'autres sortes de variables, comme les noms de classe, que nous verrons ultérieurement.
+
+Notons qu'il s'agit uniquement d'une convention, ceci n'est pas imposé par le langage lui-même.
+
+Pour des raisons de lisibilité, il est également possible d'utiliser le tiret bas _ dans les noms de variables. On préfèrera ainsi :
+
+age_moyen = 75 # oui
+
+plutôt que ceci (bien qu'autorisé par le langage) :
+
+AgeMoyen = 75 # autorisé, mais non
+
+On peut également utiliser des chiffres dans les noms de variables comme par exemple :
+
+age_moyen_dept75 = 80
+
+avec la restriction toutefois que le premier caractère ne peut pas être un chiffre, cette affectation est donc refusée :
+
+75_age_moyen = 80 # erreur de syntaxe
+
+Le tiret bas comme premier caractère
+
+Il est par contre, possible de faire commencer un nom de variable par un tiret bas comme premier caractère ; toutefois, à ce stade, nous vous déconseillons d'utiliser cette pratique qui est réservée à des conventions de nommage bien spécifiques.
+
+_autorise_mais_deconseille = 'Voir le PEP 008'
+
+Et en tout cas, il est fortement déconseillé d'utiliser des noms de la forme __variable__ qui sont réservés au langage. Nous reviendrons sur ce point dans le futur, mais regardez par exemple cette variable que nous n'avons définie nulle part mais qui pourtant existe bel et bien :
+
+__name__  # ne définissez pas vous-même de variables de ce genre
+
+Ponctuation
+
+Dans la plage des caractères ASCII, il n'est pas possible d'utiliser d'autres caractères que les caractères alphanumériques et le tiret bas. Notamment le tiret haut - est interprété comme l'opération de soustraction. Attention donc à cette erreur fréquente :
+
+age-moyen = 75  # erreur : en fait python l'interprète comme 'age - moyen = 75'
+
+Caractères exotiques
+
+En Python 3, il est maintenant aussi possible d'utiliser des caractères Unicode dans les identificateurs :
+
+# les caractères accentués sont permis
+
+nom_élève = "Jules Maigret"
+
+# ainsi que l'alphabet grec
+
+from math import cos, pi as π
+
+θ = π / 4
+
+cos(θ)
+
+Tous les caractères Unicode ne sont pas permis - heureusement car cela serait source de confusion. Nous citons dans les références les documents qui précisent quels sont exactement les caractères autorisés.
+
+# ce caractère n'est pas autorisé, car il
+
+# est considéré comme un signe mathématique (produit)
+
+∏ = 10
+
+# ce caractère est encore différent, c'est aussi
+
+# un pi grec mais pas le même, cette fois-ci
+
+# c'est un nom de variable acceptable mais 
+
+# il n'est pas défini
+
+𝞟
+
+Conseil
+
+Il est très vivement recommandé :
+
+    tout d'abord de coder en anglais ;
+    ensuite de ne pas définir des identificateurs avec des caractères non ASCII, dans toute la mesure du possible , voyez par exemple la confusion que peut créer le fait de nommer un identificateur π ou 𝞟 ou ∏ ;
+    enfin si vous utilisez un encodage autre que UTF-8, vous devez bien spécifier l'encodage utilisé dans votre fichier source ; nous y reviendrons en deuxième semaine.
+
+Pour en savoir plus
+
+Pour les esprits curieux, Guido van Rossum, le fondateur de Python, est le co-auteur d'un document qui décrit les conventions de codage à utiliser dans la bibliothèque standard Python. Ces règles sont plus restrictives que ce que le langage permet de faire, mais constituent une lecture intéressante si vous projetez d'écrire beaucoup de Python.
+
+Voir dans le PEP 008 la section consacrée aux règles de nommage - (en anglais)
+
+Voir enfin, au sujet des caractères exotiques dans les identificateurs :
+
+    le PEP 3131 qui définit les caractères exotiques autorisés, et qui repose à son tour sur
+    http://www.unicode.org/reports/tr31/ (très technique !)
+
+---------------------------------------------------------------------------------------------
+Les mots-clés de Python
+Mots réservés
+
+Il existe en Python certains mots spéciaux, qu'on appelle des mots-clés, ou keywords en anglais, qui sont réservés et ne peuvent pas être utilisés comme identifiants, c'est-à-dire comme un nom de variable.
+
+C'est le cas par exemple pour l'instruction if, que nous verrons prochainement, qui permet bien entendu d'exécuter tel ou tel code selon le résultat d'un test.
+
+variable = 15
+
+if variable <= 10:
+
+    print("en dessous de la moyenne")
+
+else:
+
+    print("au dessus")
+
+À cause de la présence de cette instruction dans le langage, il n'est pas autorisé d'appeler une variable if.
+
+# interdit, if est un mot-clé
+
+if = 1
+
+Liste complète
+
+Voici la liste complète des mots-clés :
+  	  	  	  	 
+False 	await 	else 	import 	pass
+None 	break 	except 	in 	raise
+True 	class 	finally 	is 	return
+and 	continue 	for 	lambda 	try
+as 	def 	from 	nonlocal 	while
+assert 	del 	global 	not 	with
+async 	elif 	if 	or 	yield
+
+Nous avons indiqué en gras les nouveautés par rapport à Python 2 (sachant que réciproquement exec et print ont perdu leur statut de mot-clé depuis Python 2, ce sont maintenant des fonctions).
+
+Il vous faudra donc y prêter attention, surtout au début, mais avec un tout petit peu d'habitude vous saurez rapidement les éviter.
+
+Vous remarquerez aussi que tous les bons éditeurs de texte supportant du code Python vont colorer les mots-clés différemment des variables. Par exemple, IDLE colorie les mots-clés en orange, vous pouvez donc très facilement vous rendre compte que vous allez, par erreur, en utiliser un comme nom de variable.
+
+Cette fonctionnalité, dite de coloration syntaxique, permet d'identifier d'un coup d'œil, grâce à un code de couleur, le rôle des différents éléments de votre code : variables, mots-clés, etc. D'une manière générale, nous vous déconseillons fortement d'utiliser un éditeur de texte qui n'offre pas cette fonctionnalité de coloration syntaxique.
+Pour en savoir plus
+
+On peut se reporter à cette page :
+
+https://docs.python.org/3/reference/lexical_analysis.html#keywords
+
+
+-------------------------------------------------------------------------------------
+Un peu de calcul sur les types
+Complément - niveau basique
+La fonction type
+
+Nous avons vu dans la vidéo que chaque objet possède un type. On peut très simplement accéder au type d'un objet en appelant une fonction built-in, c'est-à-dire prédéfinie dans Python, qui s'appelle, eh bien oui, type.
+
+On l'utilise tout simplement comme ceci :
+
+type(1)
+
+type('spam')
+
+Cette fonction est assez peu utilisée par les programmeurs expérimentés, mais va nous être utile à bien comprendre le langage, notamment pour manipuler les valeurs numériques.
+Types, variables et objets
+
+On a vu également que le type est attaché à l'objet et non à la variable.
+
+x = 1
+
+type(x)
+
+# la variable x peut référencer un objet de n'importe quel type
+
+​
+
+x = [1, 2, 3]
+
+type(x)
+
+Complément - niveau avancé
+La fonction isinstance
+
+Une autre fonction prédéfinie, voisine de type mais plus utile dans la pratique, est la fonction isinstance qui permet de savoir si un objet est d'un type donné. Par exemple :
+
+isinstance(23, int)
+
+À la vue de ce seul exemple, on pourrait penser que isinstance est presque identique à type ; en réalité elle est un peu plus élaborée, notamment pour la programmation objet et l'héritage, nous aurons l'occasion d'y revenir.
+
+On remarque ici en passant que la variable int est connue de Python alors que nous ne l'avons pas définie. Il s'agit d'une variable prédéfinie, qui désigne le type des entiers, que nous étudierons très bientôt.
+
+Pour conclure sur isinstance, cette fonction est utile en pratique précisément parce que Python est à typage dynamique. Aussi il est souvent utile de s'assurer qu'une variable passée à une fonction est du (ou des) type(s) attendu(s), puisque contrairement à un langage typé statiquement comme C++, on n'a aucune garantie de ce genre à l'exécution. À nouveau, nous aurons l'occasion de revenir sur ce point.
+
+--------------------------------------------------------------------------------------------------------------------------
+
+Gestion de la mémoire
+Complément - niveau basique
+
+L'objet de ce complément est de vous montrer qu'avec Python vous n'avez pas à vous préoccuper de la mémoire. Pour expliquer la notion de gestion de la mémoire, il nous faut donner un certain nombre de détails sur d'autres langages comme C et C++. Si vous souhaitez suivre ce cours à un niveau basique vous pouvez ignorer ce complément et seulement retenir que Python se charge de tout pour vous :)
+Complément - niveau intermédiaire
+Langages de bas niveau
+
+Dans un langage traditionnel de bas niveau comme C ou C++, le programmeur est en charge de l'allocation - et donc de la libération - de la mémoire.
+
+Ce qui signifie que, sauf pour les valeurs stockées dans la pile, le programmeur est amené :
+
+    à réclamer de la mémoire au système d'exploitation en appelant explicitement malloc (C) ou new (C++) ;
+    et réciproquement à rendre cette mémoire au système d'exploitation lorsqu'elle n'est plus utilisée, en appelant free (C) ou delete (C++).
+
+Avec ce genre de langage, la gestion de la mémoire est un aspect important de la programmation. Ce modèle offre une grande flexibilité, mais au prix d'un coût élevé en matière de vitesse de développement.
+
+En effet, il est assez facile d'oublier de libérer la mémoire après usage, ce qui peut conduire à épuiser les ressources disponibles. À l'inverse, utiliser une zone mémoire non allouée peut conduire à des bugs très difficiles à localiser et à des problèmes de sécurité majeurs. Notons qu'une grande partie des attaques en informatique reposent sur l'exploitation d'erreurs de gestion de la mémoire.
+Langages de haut niveau
+
+Pour toutes ces raisons, avec un langage de plus haut niveau comme Python, le programmeur est libéré de cet aspect de la programmation.
+
+Pour anticiper un peu sur le cours des semaines suivantes, voici ce que vous pouvez garder en tête s'agissant de la gestion mémoire en Python :
+
+    vous créez vos objets au fur et à mesure de vos besoins ;
+
+    vous n'avez pas besoin de les libérer explicitement, le "Garbage Collector" de Python va s'en charger pour recycler la mémoire lorsque c'est possible ;
+
+    Python a tendance à être assez gourmand en mémoire, comparé à un langage de bas niveau, car tout est objet et chaque objet est assorti de méta-informations qui occupent une place non négligeable. Par exemple, chaque objet possède au minimum :
+        une référence vers son type - c'est le prix du typage dynamique ;
+        un compteur de références - le nombre d'autres valeurs (variables ou objets) qui pointent vers l'objet, cette information est notamment utilisée, précisément, par le Garbage Collector pour déterminer si la mémoire utilisée par un objet peut être libérée ou non.
+
+    un certain nombre de types prédéfinis et non mutables sont implémentés en Python comme des singletons, c'est-à-dire qu'un seul objet est créé et partagé, c'est le cas par exemple pour les petits entiers et les chaînes de caractères, on en reparlera ;
+
+    lorsqu'on implémente une classe, il est possible de lui conférer cette caractéristique de singleton, de manière à optimiser la mémoire nécessaire pour exécuter un programme.
+
+-----------------------------------------------------------------------------------------------
+
+Typages statique et dynamique
+Complément - niveau intermédiaire
+
+Parmi les langages typés, on distingue les langages à typage statique et ceux à typage dynamique. Ce notebook tente d'éclaircir ces notions pour ceux qui n'y sont pas familiers.
+Typage statique
+
+À une extrémité du spectre, on trouve les langages compilés, dits à typage statique, comme par exemple C ou C++.
+
+En C on écrira, par exemple, une version simpliste de la fonction factoriel comme ceci :
+
+int factoriel(int n) {
+    int result = 1;
+    for (int loop = 1; loop <= n; loop++)
+        result *= loop;
+    return result;
+}
+
+Comme vous pouvez le voir - ou le deviner - toutes les variables utilisées ici (comme par exemple n, result et loop) sont typées :
+
+    on doit appeler factoriel avec un argument n qui doit être un entier (int est le nom du type entier) ;
+    les variables internes result et loop sont de type entier ;
+    factoriel retourne une valeur de type entier.
+
+Ces informations de type ont essentiellement trois fonctions :
+
+    en premier lieu, elles sont nécessaires au compilateur. En C si le programmeur ne précisait pas que result est de type entier, le compilateur n'aurait pas suffisamment d'éléments pour générer le code assembleur correspondant ;
+    en contrepartie, le programmeur a un contrôle très fin de l'usage qu'il fait de la mémoire et du matériel. Il peut choisir d'utiliser un entier sur 32 ou 64 bits, signé ou pas, ou construire avec struct et union un arrangement de ses données ;
+    enfin, et surtout, ces informations de type permettent de faire un contrôle a priori de la validité du programme, par exemple, si à un autre endroit dans le code on trouve :
+
+#include <stdio.h>
+
+int main(int argc, char *argv[]) {
+    /* le premier argument de la ligne de commande est argv[1] */
+    char *input = argv[1];
+    /* calculer son factoriel et afficher le résultat */
+    printf("Factoriel (%s) = %d\n", input, factoriel(input));
+    /*                                               ^^^^^
+
+     * ici on appelle factoriel avec une entrée de type 'chaîne de caractères' */
+}
+
+alors le compilateur va remarquer qu'on essaie d'appeler factoriel avec comme argument input qui, pour faire simple, est une chaîne de caractères et comme factoriel s'attend à recevoir un entier, ce programme n'a aucune chance de compiler.
+
+On parle alors de typage statique, en ce sens que chaque variable a exactement un type qui est défini par le programmeur une bonne fois pour toutes.
+
+C'est ce qu'on appelle le contrôle de type, ou type-checking en anglais. Si on ignore le point sur le contrôle fin de la mémoire, qui n'est pas crucial à notre sujet, ce modèle de contrôle de type présente :
+
+    l'inconvénient de demander davantage au programmeur (je fais abstraction, à ce stade et pour simplifier, de langages à inférence de types comme ML et Haskell) ;
+    et l'avantage de permettre un contrôle étendu, et surtout précoce (avant même de l'exécuter), de la bonne correction du programme.
+
+Cela étant dit, le typage statique en C n'empêche pas le programmeur débutant d'essayer d'écrire dans la mémoire à partir d'un pointeur NULL - et le programme de s'interrompre brutalement. Il faut être conscient des limites du typage statique.
+Typage dynamique
+
+À l'autre bout du spectre, on trouve des langages comme, eh bien, Python.
+
+Pour comprendre cette notion de typage dynamique, regardons la fonction suivante somme.
+
+def somme(*largs):
+
+    "retourne la somme de tous ses arguments"
+
+    if not largs:
+
+        return 0
+
+    result = largs[0]
+
+    for i in range(1, len(largs)):
+
+        result += largs[i]
+
+    return result
+
+Naturellement, vous n'êtes pas à ce stade en mesure de comprendre le fonctionnement intime de la fonction. Mais vous pouvez tout de même l'utiliser :
+
+somme(12, 14, 300)
+
+liste1 = ['a', 'b', 'c']
+
+liste2 = [0, 20, 30]
+
+liste3 = ['spam', 'eggs']
+
+somme(liste1, liste2, liste3)
+
+Vous pouvez donc constater que somme peut fonctionner avec des objets de types différents. En fait, telle qu'elle est écrite, elle va fonctionner s'il est possible de faire + entre ses arguments. Ainsi, par exemple, on pourrait même faire :
+
+# Python sait faire + entre deux chaînes de caractères
+
+somme('abc', 'def')
+
+Mais par contre on ne pourrait pas faire
+
+# ceci va déclencher une exception à l'exécution
+
+somme(12, [1, 2, 3])
+
+Il est utile de remarquer que le typage de Python, qui existe bel et bien comme on le verra, est qualifié de dynamique parce que le type est attaché à un objet et non à la variable qui le référence. On aura bien entendu l'occasion d'approfondir tout ça dans le cours.
+
+En Python, on fait souvent référence au typage sous l'appellation duck typing, de manière imagée :
+
+    If it looks like a duck and quacks like a duck, it's a duck.
+
+On voit qu'on se trouve dans une situation très différente de celle du programmeur C/C++, en ce sens que :
+
+    à l'écriture du programme, il n'y aucun des surcoûts qu'on trouve avec C ou C++ en matière de définition de type ;
+    aucun contrôle de type n'est effectué a priori par le langage au moment de la définition de la fonction somme ;
+    par contre au moment de l'exécution, s'il s'avère qu'on tente de faire une somme entre deux types qui ne peuvent pas être additionnés, comme ci-dessus avec un entier et une liste, le programme ne pourra pas se dérouler correctement.
+
+Il y a deux points de vue vis-à-vis de la question du typage.
+
+Les gens habitués au typage statique se plaignent du typage dynamique en disant qu'on peut écrire des programmes faux et qu'on s'en rend compte trop tard - à l'exécution.
+
+À l'inverse les gens habitués au typage dynamique font valoir que le typage statique est très partiel, par exemple, en C si on essaie d'écrire dans un pointeur NULL, le système d'exploitation ne le permet pas et le programme sort tout aussi brutalement.
+
+Bref, selon le point de vue, le typage dynamique est vécu comme un inconvénient (pas assez de bonnes propriétés détectées par le langage) ou comme un avantage (pas besoin de passer du temps à déclarer le type des variables, ni à faire des conversions pour satisfaire le compilateur).
+
+Vous remarquerez cependant à l'usage, qu'en matière de vitesse de développement, les inconvénients du typage dynamique sont très largement compensés par ses avantages.
+Type hints
+
+Signalons enfin que depuis python-3.5, il est possible d'ajouter des annotations de type, pour expliciter les suppositions qui sont faites par le programmeur pour le bon fonctionnement du code.
+
+Nous aurons là encore l'occasion de détailler ce point dans le cours, signalons simplement que ces annotations sont totalement optionnelles, et que même lorsqu'elles sont présentes elles ne sont pas utilisées à l'exécution par l'interpréteur. L'idée est plutôt de permettre à des outils externes, comme par exemple mypy, d'effectuer des contrôles plus poussés concernant la correction du programme.
+
+
