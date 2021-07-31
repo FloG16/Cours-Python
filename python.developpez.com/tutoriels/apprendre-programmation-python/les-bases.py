@@ -6,4 +6,5 @@
 print('Hello World!')
 
 #Quoi de plus simple ? Python inclut une fonction prédéfinie print qui affiche à l'écran la séquence de caractères qu'on lui fournit. 
-#Cette unique ligne de code constitue notre premier programme Python.*/
+#Cette unique ligne de code constitue notre premier programme Python.
+
