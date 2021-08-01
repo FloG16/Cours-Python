@@ -1,3 +1,5 @@
+#source : https://photovoltaique-energie.fr/estimer-la-production-photovoltaique.html
+
 #Théorie : formules de base pour connaître la production d'un panneau ou d'un système photovoltaïque
 #Calcul par le rendement du panneau (ou de la cellule)
 
