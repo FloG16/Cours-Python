@@ -1,3 +1,5 @@
+#source : https://www.isba.fr/wp-content/uploads/2018/09/EN-1992-1-1.pdf
+
 #Page 22
 #EN 1992-1-1:2004
 #2.3.2 Propriétés des matériaux et des produits
