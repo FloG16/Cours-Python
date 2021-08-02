@@ -1,6 +1,6 @@
-#source : https://core.ac.uk/download/pdf/144283017.pdf
+source : https://core.ac.uk/download/pdf/144283017.pdf
 
-#1.3 Modélisation des batteries lithium-ion
+1.3 Modélisation des batteries lithium-ion
 #Un modèle est une représentation mathématique simplifiée d’un phénomène physique. Les
 #modèles permettent de prédire le comportement d’un système et d’observer des phénomènes parfois
 #impossibles à mesurer dans la réalité. Par exemple, avec un modèle on peut rapidement simuler
@@ -39,15 +39,15 @@
 #[17]. Ainsi l’autonomie d’une batterie devrait pouvoir se calculer directement par l’équation 1.1,
 #où tauto est le temps de décharge et I est le courant demandé.
 
-#tauto = Qcell/I
+tauto = Qcell/I
 
-#Or, les batteries au lithium n’adoptent pas un comportement idéal car leur tension ne
+Or, les batteries au lithium n’adoptent pas un comportement idéal car leur tension ne
 #reste pas constante tout au long de la décharge. On a longtemps estimé l’autonomie réelle d’une
 #batterie par la loi de Peukert (eq. 1.2). Le b > 1 est une constante propre à chaque batterie,
 #tenant compte de la diminution de la capacité en fonction du courant débité et doit être obtenus
 #expérimentalement.
 
-#tauto = Qcell/Ib
+tauto = Qcell/Ib
 
 #La relation de Peukert (eq. 1.2) ne tient pas compte de la température, ni ne permet de
 #calculer la tension de la batterie. C’est l’utilisation des batteries dans les appareils électroniques
